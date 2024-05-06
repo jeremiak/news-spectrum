@@ -68,7 +68,7 @@ await browser.close();
 
 function formatSiteHtml(site) {
   const { name } = site;
-  return `<div class="news-site"><div class="news-site-name">${name}</div><div class="news-site-screenshot"><a href="${site.url}"><img src="/screenshots/${
+  return `<div class="news-site"><div class="news-site-name">${name}</div><div class="news-site-screenshot"><a href="${site.url}"><img src="./screenshots/${
     _.snakeCase(name)
   }.png"></a></div></div>`;
 }
