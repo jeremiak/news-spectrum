@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.date {
+  background-color: #ccc;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.category {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.category strong {
+  font-size: 20px;
+}
+
+.news-site {
+  border-top: 2px solid black;
+}
+
+.news-site-name {
+  font-size: 18px;
+  text-align: center;
+}
+
+.news-site img {
+  max-width: 300px;
+}
