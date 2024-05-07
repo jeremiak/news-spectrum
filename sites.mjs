@@ -30,6 +30,11 @@ const sites = [
     category: 'Left'
   },
   {
+    name: 'AlterNet',
+    url: 'https://www.alternet.org',
+    category: 'Left'
+  },
+  {
     name: 'AP',
     url: 'https://www.apnews.com/',
     category: 'Center'
