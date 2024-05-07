@@ -23,7 +23,7 @@ async function screenshot(site) {
     width: 390,
     height: 844,
   });
-  await page.setJavaScriptEnabled(false)
+  await page.setJavaScriptEnabled(false);
   try {
     await page.goto(site.url, {
       waitUntil: ["domcontentloaded"],
@@ -79,14 +79,16 @@ const categoriesHtml = Object.keys(categories).map((category) => {
     return formatSiteHtml(site);
   }).join("");
   const html =
-    `<div class="category"><strong>${category}</strong><div class="category-sites">${s}</a></div></div>`;
+    `<div class="category ${category.toLowerCase()}"><strong>${category}</strong><div class="category-sites">${s}</a></div></div>`;
   return html;
 }).join("");
 
 const html =
-  `<html><head><link rel="stylesheet" href="style.css"></head><body><div class="date">${
-    (new Date()).toDateString()
-  }</div><div class="categories">${categoriesHtml}</div></body></html>`;
+  `<html><head><title>News from across the American political spectrum</title><link rel="stylesheet" href="style.css"></head><body><header><div class="title">News from across the American political spectrum</div><div class="date">Last updated on <time datetime="${
+    (new Date()).toISOString()
+  }">${
+    (new Date()).toGMTString()
+  }</time></div></header><div class="categories">${categoriesHtml}</div><footer>Made by @jeremiak, <i>heavily</i> inspired by <a href="https://newsdivide.bradoyler.com/">the News Divide</a> by Brad Oyler</footer></body></html>`;
 
 await fs.writeFile("index.html", html);
 

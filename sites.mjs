@@ -20,13 +20,28 @@ const sites = [
     category: 'Left'
   },
   {
-    name: 'Haaretz',
-    url: 'https://www.haaretz.com/',
+    name: 'Mother Jones',
+    url: 'https://www.motherjones.com/',
     category: 'Left'
+  },
+  {
+    name: 'Slate',
+    url: 'https://www.slate.com/',
+    category: 'Left'
+  },
+  {
+    name: 'AP',
+    url: 'https://www.apnews.com/',
+    category: 'Center'
   },
   {
     name: 'CNN',
     url: 'https://www.cnn.com/',
+    category: 'Center'
+  },
+  {
+    name: 'NBC News',
+    url: 'https://www.nbcnews.com/',
     category: 'Center'
   },
   {
@@ -35,8 +50,18 @@ const sites = [
     category: 'Center'
   },
   {
+    name: 'Washington Post',
+    url: 'https://www.washingtonpost.com/',
+    category: 'Center'
+  },
+  {
     name: 'NPR',
     url: 'https://www.npr.org/',
+    category: 'Center'
+  },
+  {
+    name: 'Haaretz',
+    url: 'https://www.haaretz.com/',
     category: 'Center'
   },
   {
@@ -52,6 +77,16 @@ const sites = [
   {
     name: 'News Max',
     url: 'https://www.newsmax.com/',
+    category: 'Right'
+  },
+  {
+    name: 'Daily Caller',
+    url: 'https://dailycaller.com/',
+    category: 'Right'
+  },
+  {
+    name: 'National Review',
+    url: 'https://www.nationalreview.com/',
     category: 'Right'
   }
 
