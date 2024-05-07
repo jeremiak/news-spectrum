@@ -84,11 +84,11 @@ const categoriesHtml = Object.keys(categories).map((category) => {
 }).join("");
 
 const html =
-  `<html><head><title>News from across the American political spectrum</title><link rel="stylesheet" href="style.css"></head><body><header><div class="title">News from across the American political spectrum</div><div class="date">Last updated on <time datetime="${
+  `<html><head><title>Headlines from across the US political spectrum</title><link rel="stylesheet" href="style.css"></head><body><header><div class="title">Headlines from across the US political spectrum</div><div class="date">Last updated on <time datetime="${
     (new Date()).toISOString()
   }">${
     (new Date()).toGMTString()
-  }</time></div></header><div class="categories">${categoriesHtml}</div><footer>Made by @jeremiak, <i>heavily</i> inspired by <a href="https://newsdivide.bradoyler.com/">the News Divide</a> by Brad Oyler</footer></body></html>`;
+  }</time></div></header><main><div class="categories">${categoriesHtml}</div></main><footer>Made by @jeremiak, <i>heavily</i> inspired by <a href="https://newsdivide.bradoyler.com/">the News Divide</a> by Brad Oyler</footer></body></html>`;
 
 await fs.writeFile("index.html", html);
 
