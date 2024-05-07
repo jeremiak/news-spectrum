@@ -23,6 +23,7 @@ async function screenshot(site) {
     width: 390,
     height: 844,
   });
+  await page.setJavaScriptEnabled(false)
   try {
     await page.goto(site.url, {
       waitUntil: ["domcontentloaded"],
