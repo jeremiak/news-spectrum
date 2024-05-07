@@ -84,7 +84,7 @@ const categoriesHtml = Object.keys(categories).map((category) => {
 }).join("");
 
 const html =
-  `<html><head><title>Headlines from across the US political spectrum</title><link rel="stylesheet" href="style.css"></head><body><header><div class="title">Headlines from across the US political spectrum</div><div class="date">Last updated on <time datetime="${
+  `<html><head><title>Headlines from across the US political spectrum</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css"></head><body><header><div class="title">Headlines from across the US political spectrum</div><div class="date">Last updated on <time datetime="${
     (new Date()).toISOString()
   }">${
     (new Date()).toGMTString()

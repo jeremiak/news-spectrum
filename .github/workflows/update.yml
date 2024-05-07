@@ -3,7 +3,7 @@ name: Update screenshots
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 14,18,22 * * *'
+    - cron: '0 */1 * * *'
 
 jobs:
   run:
