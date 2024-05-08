@@ -40,6 +40,11 @@ const sites = [
     category: 'Left'
   },
   {
+    name: 'The Intercept',
+    url: 'https://www.theintercept.com',
+    category: 'Left'
+  },
+  {
     name: 'AP',
     url: 'https://www.apnews.com/',
     category: 'Center'
