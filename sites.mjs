@@ -35,6 +35,11 @@ const sites = [
     category: 'Left'
   },
   {
+    name: 'Lever News',
+    url: 'https://www.levernews.com/',
+    category: 'Left'
+  },
+  {
     name: 'AP',
     url: 'https://www.apnews.com/',
     category: 'Center'
@@ -92,6 +97,16 @@ const sites = [
   {
     name: 'National Review',
     url: 'https://www.nationalreview.com/',
+    category: 'Right'
+  },
+  {
+    name: 'Red State',
+    url: 'https://redstate.com/',
+    category: 'Right'
+  },
+  {
+    name: 'Breitbart',
+    url: 'https://www.breitbart.com/',
     category: 'Right'
   }
 
