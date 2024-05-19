@@ -6,7 +6,7 @@ import Queue from "p-queue";
 import sites from "./sites.mjs";
 
 const browser = await puppeteer.launch();
-const queue = new Queue({ concurrency: 1 });
+const queue = new Queue({ concurrency: 2 });
 
 function wait(ms) {
   return new Promise((resolve, reject) => {
@@ -18,12 +18,13 @@ function wait(ms) {
 
 async function screenshot(site) {
   console.log("📸", site.name);
+  const enableJs = site?.enableJs || false
   const page = await browser.newPage();
   await page.setViewport({
     width: 390,
     height: 844,
   });
-  await page.setJavaScriptEnabled(false);
+  await page.setJavaScriptEnabled(enableJs);
   try {
     await page.goto(site.url, {
       waitUntil: ["domcontentloaded"],
@@ -33,8 +34,10 @@ async function screenshot(site) {
       path: `screenshots/${_.snakeCase(site.name)}.png`,
     });
     await page.close();
+    console.log("✅", site.name);
   } catch (e) {
     await page.close();
+    console.log("💥", site.name);
     throw e;
   }
 }
@@ -71,7 +74,7 @@ function formatSiteHtml(site) {
   const { name } = site;
   return `<div class="news-site"><div class="news-site-name">${name}</div><div class="news-site-screenshot"><a href="${site.url}"><img src="./screenshots/${
     _.snakeCase(name)
-  }.png"></a></div></div>`;
+  }.png" alt="Screenshot of ${site.name}"></a></div></div>`;
 }
 
 const categoriesHtml = Object.keys(categories).map((category) => {

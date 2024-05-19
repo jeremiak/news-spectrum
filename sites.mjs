@@ -3,7 +3,8 @@
     name: string
     url: string
     category: string,
-    afterWait?: Function
+    afterWait?: Function,
+    enableJS?: bool
   }
 */
 
@@ -12,6 +13,26 @@ const sites = [
   {
     name: 'The Huffington Post',
     url: 'https://www.huffpost.com/',
+    category: 'Left'
+  },
+  {
+    name: 'The Daily Beast',
+    url: 'https://www.thedailybeast.com/',
+    category: 'Left'
+  },
+  {
+    name: 'Democracy Now',
+    url: 'https://www.democracynow.org/',
+    category: 'Left'
+  },
+  {
+    name: 'The Nation',
+    url: 'https://www.thenation.com/',
+    category: 'Left',
+  },
+  {
+    name: 'Vox',
+    url: 'https://www.vox.com/',
     category: 'Left'
   },
   {
@@ -27,21 +48,6 @@ const sites = [
   {
     name: 'Slate',
     url: 'https://www.slate.com/',
-    category: 'Left'
-  },
-  {
-    name: 'AlterNet',
-    url: 'https://www.alternet.org',
-    category: 'Left'
-  },
-  {
-    name: 'Lever News',
-    url: 'https://www.levernews.com/',
-    category: 'Left'
-  },
-  {
-    name: 'The Intercept',
-    url: 'https://www.theintercept.com',
     category: 'Left'
   },
   {
@@ -70,6 +76,12 @@ const sites = [
     category: 'Center'
   },
   {
+    name: 'Axios',
+    url: 'https://www.axios.com/',
+    category: 'Center',
+    enableJs: true
+  },
+  {
     name: 'NPR',
     url: 'https://www.npr.org/',
     category: 'Center'
@@ -90,6 +102,11 @@ const sites = [
     category: 'Right'
   },
   {
+    name: 'New York Post',
+    url: 'https://nypost.com/',
+    category: 'Right',
+  },
+  {
     name: 'News Max',
     url: 'https://www.newsmax.com/',
     category: 'Right'
@@ -102,7 +119,8 @@ const sites = [
   {
     name: 'National Review',
     url: 'https://www.nationalreview.com/',
-    category: 'Right'
+    category: 'Right',
+    enableJs: true,
   },
   {
     name: 'Red State',
