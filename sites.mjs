@@ -76,10 +76,9 @@ const sites = [
     category: 'Center'
   },
   {
-    name: 'Axios',
-    url: 'https://www.axios.com/',
-    category: 'Center',
-    enableJs: true
+    name: 'Politico',
+    url: 'https://www.politico.com/',
+    category: 'Center'
   },
   {
     name: 'NPR',
