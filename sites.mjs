@@ -86,8 +86,8 @@ const sites = [
     category: 'Center'
   },
   {
-    name: 'Haaretz',
-    url: 'https://www.haaretz.com/',
+    name: 'CalMatters',
+    url: 'https://www.calmatters.org',
     category: 'Center'
   },
   {
