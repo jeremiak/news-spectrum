@@ -51,16 +51,6 @@ const sites = [
     category: 'Left'
   },
   {
-    name: 'AP',
-    url: 'https://www.apnews.com/',
-    category: 'Center'
-  },
-  {
-    name: 'CNN',
-    url: 'https://www.cnn.com/',
-    category: 'Center'
-  },
-  {
     name: 'NBC News',
     url: 'https://www.nbcnews.com/',
     category: 'Center'
@@ -88,6 +78,16 @@ const sites = [
   {
     name: 'CalMatters',
     url: 'https://www.calmatters.org',
+    category: 'Center'
+  },
+  {
+    name: 'AP',
+    url: 'https://www.apnews.com/',
+    category: 'Center'
+  },
+  {
+    name: 'CNN',
+    url: 'https://www.cnn.com/',
     category: 'Center'
   },
   {

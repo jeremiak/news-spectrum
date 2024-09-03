@@ -91,7 +91,7 @@ const html =
     (new Date()).toISOString()
   }">${
     (new Date()).toGMTString()
-  }</time></div></header><main><div class="categories">${categoriesHtml}</div></main><footer>Made by @jeremiak, <i>heavily</i> inspired by <a href="https://newsdivide.bradoyler.com/">the News Divide</a> by Brad Oyler</footer></body></html>`;
+  }</time></div><div class="scroll-instructions">⬅  You can scroll left or right  <span class="right-arrow">⬅</span></div></header><main><div class="categories">${categoriesHtml}</div></main><footer>Made by @jeremiak, <i>heavily</i> inspired by <a href="https://newsdivide.bradoyler.com/">the News Divide</a> by Brad Oyler</footer><script>const main = document.querySelector('main'); const s = Math.floor(main.scrollWidth / 3); main.scrollLeft = s;</script></body></html>`;
 
 await fs.writeFile("index.html", html);
 

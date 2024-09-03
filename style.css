@@ -1,5 +1,5 @@
 body {
-  font-family: 'San Francisco';
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -15,15 +15,30 @@ header {
   font-weight: 700;
 }
 
-.date {
+.date,
+.scroll-instructions {
   font-size: .7em;
   margin-top: .5rem;
+}
+
+.scroll-instructions {
+  display: none;
+}
+
+.right-arrow {
+  display: inline-block;
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 
 @media screen and (max-width: 800px) {
   main {
     overflow-x: scroll;
     width: 100%;
+  }
+
+  .scroll-instructions {
+    display: block;
   }
 
   .categories {
