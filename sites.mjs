@@ -61,11 +61,6 @@ const sites = [
     category: 'Center'
   },
   {
-    name: 'Washington Post',
-    url: 'https://www.washingtonpost.com/',
-    category: 'Center'
-  },
-  {
     name: 'Politico',
     url: 'https://www.politico.com/',
     category: 'Center'
