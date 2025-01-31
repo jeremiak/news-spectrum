@@ -5,8 +5,8 @@ import puppeteer from "puppeteer";
 import Queue from "p-queue";
 import sites from "./sites.mjs";
 
-const browser = await puppeteer.launch();
-const queue = new Queue({ concurrency: 2 });
+const browser = await puppeteer.launch({ headless: true });
+const queue = new Queue({ concurrency: 1 });
 
 function wait(ms) {
   return new Promise((resolve, reject) => {
