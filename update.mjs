@@ -5,7 +5,10 @@ import puppeteer from "puppeteer";
 import Queue from "p-queue";
 import sites from "./sites.mjs";
 
-const browser = await puppeteer.launch({ headless: true });
+const browser = await puppeteer.launch({
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  headless: true,
+});
 const queue = new Queue({ concurrency: 1 });
 
 function wait(ms) {
@@ -18,7 +21,7 @@ function wait(ms) {
 
 async function screenshot(site) {
   console.log("📸", site.name);
-  const enableJs = site?.enableJs || false
+  const enableJs = site?.enableJs || false;
   const page = await browser.newPage();
   await page.setViewport({
     width: 390,
