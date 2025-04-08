@@ -61,11 +61,6 @@ const sites = [
     category: 'Center'
   },
   {
-    name: 'Politico',
-    url: 'https://www.politico.com/',
-    category: 'Center'
-  },
-  {
     name: 'NPR',
     url: 'https://www.npr.org/',
     category: 'Center'
@@ -78,11 +73,6 @@ const sites = [
   {
     name: 'AP',
     url: 'https://www.apnews.com/',
-    category: 'Center'
-  },
-  {
-    name: 'CNN',
-    url: 'https://www.cnn.com/',
     category: 'Center'
   },
   {
@@ -109,12 +99,6 @@ const sites = [
     name: 'Daily Caller',
     url: 'https://dailycaller.com/',
     category: 'Right'
-  },
-  {
-    name: 'National Review',
-    url: 'https://www.nationalreview.com/',
-    category: 'Right',
-    enableJs: true,
   },
   {
     name: 'Red State',
